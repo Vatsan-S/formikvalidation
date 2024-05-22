@@ -1,0 +1,228 @@
+/* master  layout */
+body {
+  background-color: #27323d;
+}
+.masterContainer {
+  /* border: 10px solid green; */
+  display: flex;
+  padding: 16px;
+  background-color: #27323d;
+}
+.listAndData {
+  /* border: 5px solid red; */
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
+}
+.userRow {
+  cursor: pointer;
+}
+/* top cards  */
+
+.dataCards {
+  overflow: auto;
+}
+
+/* list  */
+.topCards {
+  max-width: 1240px;
+  display: inline-flex;
+  /* flex-wrap: wrap; */
+  overflow-x: auto;
+  justify-content: space-around;
+  margin: 16px auto;
+}
+
+.card {
+  width: 300px;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border: none;
+  outline: none;
+  margin: 8px;
+  background-color: #1e2734;
+  color: #aab2ba;
+}
+
+.containerCard {
+  /* border: 1px solid green; */
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #1e2734;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  max-height: 72vh;
+
+  position: relative;
+  overflow: hidden;
+}
+
+th,
+td {
+  background-color: #1e2734 !important;
+  color: #aab2ba !important;
+}
+
+/* topNavigation  */
+
+.topNav {
+  height: 50px;
+  width: 100%;
+  background-color: #2e3b4c;
+}
+
+/* navigation  */
+.navi {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px auto;
+}
+
+.navi a {
+  text-decoration: none;
+  color: lightgrey;
+}
+.list {
+  display: flex;
+}
+.navItem {
+  background-color: #27323d;
+  color: #aab2ba;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+.selected {
+  background-color: #1ea54c;
+  color: #aab2ba;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+/* modal area  */
+.display {
+  display: none;
+}
+.editButton {
+  background-color: #27323d;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  color: #aab2ba;
+  margin-right: 8px;
+}
+
+.deleteButton {
+  color: lightgrey;
+  border: none;
+  background-color: transparent;
+}
+
+.deleteButton:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.editField form {
+  display: flex;
+  flex-direction: column;
+}
+
+.editField form input,
+textarea {
+  margin-bottom: 16px;
+}
+
+.save {
+  border: none;
+  width: 30%;
+}
+
+.authorName {
+  color: grey;
+}
+.otherInfo {
+  margin-bottom: 4px;
+}
+.functionality {
+  margin-top: 32px;
+}
+.split {
+  display: flex;
+  justify-content: space-around;
+}
+.modal-content {
+  background-color: #aab2ba;
+  color: #1e2734;
+  border: 1px solid #1e2734 !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid #1e2734 !important;
+}
+.modal-footer {
+  border-top: 1px solid #1e2734 !important;
+}
+
+.modal-content input,
+textarea {
+  background-color: transparent;
+  border: 1px solid #27323d;
+  padding: 4px 8px;
+  border-radius: 4px;
+  max-width: 300px;
+  outline: none;
+}
+/* createzone  */
+
+.createButton {
+  width: 100px;
+  position: fixed;
+  bottom: 05%;
+  right: 03%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.createNavi {
+  display: flex;
+  gap: 16px;
+}
+.createNavi p {
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.selectedCreation {
+  background-color: #1ea54c;
+  color: #27323d;
+}
+
+.formikBook form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.formikAuthor form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (max-width: 1209px) {
+  .list {
+    flex-direction: column;
+  }
+
+  .navi {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .resp {
+    display: none;
+  }
+}
