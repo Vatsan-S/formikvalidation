@@ -170,7 +170,7 @@ const App = () => {
     bio: Yup.string().required("bio is must"),
   });
 
-  const handleBookSubmit = (values) => {
+  const handleBookSubmit = (values,{ resetForm }) => {
     let newBook = {
       id: bookDetails.length + 1,
       title: values.title,
@@ -181,9 +181,10 @@ const App = () => {
     };
 
     setBookDetails([...bookDetails, newBook]);
+    resetForm();
   };
 
-  const handleauthorSubmit = (values) => {
+  const handleauthorSubmit = (values, { resetForm }) => {
     let newAuthor = {
       id: authorDetails.length + 1,
       name: values.name,
@@ -191,6 +192,7 @@ const App = () => {
       bio: values.bio,
     };
     setAuthorDetails([...authorDetails, newAuthor]);
+    resetForm();
   };
   return (
     <>
@@ -276,6 +278,7 @@ const App = () => {
                     initialValues={bookValues}
                     validationSchema={bookSchema}
                     onSubmit={handleBookSubmit}
+                    resetForm
                   >
                     <Form>
                       <div className="createTitle">
